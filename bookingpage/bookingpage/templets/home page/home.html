@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Doctor Appointment System</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#booking">Book Appointment</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+</section>  
+<section id="doctors">
+    <h2>Our Doctors</h2>
+    <div class="doctor">
+        <img src="doct1.jpeg" alt="Dr. John Smith" class="doctor-img">
+        <h3>Dr. John Smith</h3>
+        <p>Specialty: Cardiologist</p>
+        <button onclick="bookNow('Dr. John Smith')">Book Now</button>
+    </div>
+    <div class="doctor">
+        <img src="doct3.jpg" alt="Dr. Jane Doe" class="doctor-img">
+        <h3>Dr. Jane Doe</h3>
+        <p>Specialty: Dermatologist</p>
+        <button onclick="bookNow('Dr. Jane Doe')">Book Now</button>
+    </div>
+</section>  
+    
+  
+    <section id="booking">
+        <h2>Book an Appointment</h2>
+        <form id="appointmentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            
+            <label for="doctor">Choose Doctor:</label>
+            <select id="doctor">
+                <option>Dr. John Smith</option>
+                <option>Dr. Jane Doe</option>
+            </select>
+            
+            <button type="submit">Book Appointment</button>
+        </form>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@clinic.com</p>
+        <p>Phone: +123 456 7890</p>
+    </section>
+    
+  
+    <script>
+        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let date = document.getElementById("date").value;
+            let doctor = document.getElementById("doctor").value;
+            
+            let appointment = `${name} - ${doctor} on ${date} (<a href='#' onclick='cancelAppointment(this)'>Cancel</a>)`;
+            let li = document.createElement("li");
+            li.innerHTML = appointment;
+            document.getElementById("appointmentList").appendChild(li);
+            
+            document.getElementById("appointmentForm").reset();
+        });
+        
+        function bookNow(doctorName) {
+            document.getElementById("doctor").value = doctorName;
+            document.getElementById("booking").scrollIntoView();
+        }
+        
+        function cancelAppointment(link) {
+            link.parentElement.remove();
+        }
+    </script>
+</body>
+</html>
