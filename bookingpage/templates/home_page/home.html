@@ -4,6 +4,8 @@
   <title>DOCTOR Appointment</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  {% load static %}
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -11,7 +13,7 @@
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+    <a class="navbar-brand" href="javascript:void(0)"></a> <img src="{% static 'images/logo1.jpeg' %}" alt="" width="6%" height="50px">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -21,17 +23,20 @@
           <a class="nav-link" href="javascript:void(0)">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">BOOK Appointment</a>
+          <a class="nav-link" href="javascript:void(0)">DOCTORS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">PROFILE</a>
+          <a class="nav-link" href="javascript:void(0)">BOOK APPOINTMENT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">CONTACT</a>
         </li>
       </ul>
-      <form class="d-flex">
+      <!-- <form class="d-flex">
         <input class="form-control me-2" type="text" placeholder="Search">
         <button class="btn btn-primary" type="button">Search</button>
       </form>
-    </div>
+    </div> -->
   
         <div class="auth-links">
             <a href="#">Login</a> | <a href="#">Sign Up</a>
@@ -45,13 +50,13 @@
 <section id="doctors">
     <h2>Our Doctors</h2>
     <div class="doctor">
-        <img src="doct1.jpeg" alt="Dr. John Smith" class="doctor-img">
+        <img src="{% static 'images/doct1.jpeg' %}" alt="Dr. John Smith" class="doctor-img" width="50%" height="250px">
         <h3>Dr. John Smith</h3>
         <p>Specialty: Cardiologist</p>
         <button onclick="bookNow('Dr. John Smith')">Book Now</button>
     </div>
     <div class="doctor">
-        <img src="doct3.jpg" alt="Dr. Jane Doe" class="doctor-img">
+        <img src="{% static 'images/doct3.jpg' %}" alt="Dr. Jane Doe" class="doctor-img" width="50%" height="250px">
         <h3>Dr. Jane Doe</h3>
         <p>Specialty: Dermatologist</p>
         <button onclick="bookNow('Dr. Jane Doe')">Book Now</button>
