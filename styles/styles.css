@@ -1,4 +1,4 @@
-body {
+ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -9,9 +9,9 @@ header {
     background: #007BFF;
     color: white;
     padding: 15px;
-}
+}  
 
-nav ul {
+/* nav ul {
     list-style: none;
     padding: 0;
 }
@@ -25,7 +25,62 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+} */ */
+ /* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 1rem 2rem;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin: 0 1rem;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.navbar .nav-links li a:hover {
+    text-decoration: underline;
+}
+
+.navbar .auth-links {
+    font-size: 1rem;
+}
+
+.navbar .auth-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .auth-links a:hover {
+    text-decoration: underline;
+}
+
 
 section {
     padding: 20px;
