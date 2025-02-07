@@ -13,7 +13,7 @@
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="javascript:void(0)"></a> <img src="{% static 'images/logo1.jpeg' %}" alt="" width="6%" height="50px">
+    <a class="navbar-brand" href="javascript:void(0)"></a> <img src="{% static 'images/logo1.jpeg' %}"  class="rounded-circle " alt="" width="6%" height="50px">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -43,9 +43,42 @@
         </div>
     </nav>
 
+   <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner"> 
+    <div class="carousel-item active">
+      <img src="{% static 'images/corl1.png' %}" alt="Los Angeles" class="d-block" style="width:100%; height: 450px; " >
+    </div>
+    <div class="carousel-item active">
+      <img src="{% static 'images/corl2.png' %}" alt="Los Angeles" class="d-block" style="width:100%; height: 450px; " >
+    </div>
+    <div class="carousel-item active">
+      <img src="{% static 'images/crol3.png' %}" alt="Los Angeles" class="d-block" style="width:100%; height: 450px; " >
+    </div>
+
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
 
 
 
+<!-- 
 </section>  
 <section id="doctors">
     <h2>Our Doctors</h2>
@@ -90,34 +123,167 @@
         <h2>Contact Us</h2>
         <p>Email: contact@clinic.com</p>
         <p>Phone: +123 456 7890</p>
-    </section>
+    </section> -->
     
+    <div class=" ">
+      <!-- Footer -->
+      <footer
+              class="text-center text-lg-start text-white"
+              style="background-color: #929fba"
+              >
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Links -->
+          <section class="">
+            <!--Grid row-->
+            <div class="row">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">
+                  DOCTOR'S APPOINTMENT
+                </h6>
+                <p>
+              WE OFFER PROFESSIONAL,
+              RELIABLE AND CONVENIENT HEALTHCARE SERVICE
+              AT THE COMFORT OF YOUR HOME/OFFICE
+                </p>
+              </div>
+               <!-- Grid column -->
+    
+               <hr class="w-100 clearfix d-md-none" />
+    
+               <!-- Grid column -->
+               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                 <h6 class="text-uppercase mb-4 font-weight-bold">FOR INFORMATION</h6>
+                 <p>
+                   <a class="text-white">ABOUT US</a>
+                 </p>
+                 <p>
+                   <a class="text-white">BOOKING GUIDE</a>
+                 </p>
+                 <p>
+                   <a class="text-white">BrandFlow</a>
+                 </p>
+                 <p>
+                   <a class="text-white">Bootstrap Angular</a>
+                 </p>
+               </div>
+              <!-- Grid column -->
+    
+              <hr class="w-100 clearfix d-md-none" />
+    
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                <p>
+                  <a class="text-white">MDBootstrap</a>
+                </p>
+                <p>
+                  <a class="text-white">MDWordPress</a>
+                </p>
+                <p>
+                  <a class="text-white">BrandFlow</a>
+                </p>
+                <p>
+                  <a class="text-white">Bootstrap Angular</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <hr class="w-100 clearfix d-md-none" />
+    
+              <!-- Grid column -->
+              <hr class="w-100 clearfix d-md-none" />
+    
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+    
+                <!-- Facebook -->
+                <a
+                   class="btn btn-primary btn-floating m-1"
+                   style="background-color: #3b5998"
+                   href="#!"
+                   role="button"
+                   ><i class="fab fa-facebook-f"></i
+                  ></a>
+    
+                <!-- Twitter -->
+                <a
+                   class="btn btn-primary btn-floating m-1"
+                   style="background-color: #55acee"
+                   href="#!"
+                   role="button"
+                   ><i class="fab fa-twitter"></i
+                  ></a>
+    
+                <!-- Google -->
+                <a
+                   class="btn btn-primary btn-floating m-1"
+                   style="background-color: #dd4b39"
+                   href="#!"
+                   role="button"
+                   ><i class="fab fa-google"></i
+                  ></a>
+    
+                <!-- Instagram -->
+                <a
+                   class="btn btn-primary btn-floating m-1"
+                   style="background-color: #ac2bac"
+                   href="#!"
+                   role="button"
+                   ><i class="fab fa-instagram"></i
+                  ></a>
+    
+                <!-- Linkedin -->
+                <a
+                   class="btn btn-primary btn-floating m-1"
+                   style="background-color: #0082ca"
+                   href="#!"
+                   role="button"
+                   ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                <!-- Github -->
+                <a
+                   class="btn btn-primary btn-floating m-1"
+                   style="background-color: #333333"
+                   href="#!"
+                   role="button"
+                   ><i class="fab fa-github"></i
+                  ></a>
+              </div>
+            </div>
+            <!--Grid row-->
+          </section>
+          <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div
+             class="text-center p-3"
+             style="background-color: rgba(0, 0, 0, 0.2)"
+             >
+          © 2020 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/"
+             >MDBootstrap.com</a
+            >
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </div>
   
-    <script>
-        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            
-            let name = document.getElementById("name").value;
-            let email = document.getElementById("email").value;
-            let date = document.getElementById("date").value;
-            let doctor = document.getElementById("doctor").value;
-            
-            let appointment = `${name} - ${doctor} on ${date} (<a href='#' onclick='cancelAppointment(this)'>Cancel</a>)`;
-            let li = document.createElement("li");
-            li.innerHTML = appointment;
-            document.getElementById("appointmentList").appendChild(li);
-            
-            document.getElementById("appointmentForm").reset();
-        });
-        
-        function bookNow(doctorName) {
-            document.getElementById("doctor").value = doctorName;
-            document.getElementById("booking").scrollIntoView();
-        }
-        
-        function cancelAppointment(link) {
-            link.parentElement.remove();
-        }
-    </script>
-</body>
+
+</body> 
 </html>
