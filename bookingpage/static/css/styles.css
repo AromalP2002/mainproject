@@ -103,3 +103,11 @@ form {
 form label, form input, form select, form button {
     margin: 5px;
 }
+.btndiv{
+    display: flex;
+    justify-content: center;
+}
+.cntbnt { 
+  height: 8vh; 
+   position:relative          
+}

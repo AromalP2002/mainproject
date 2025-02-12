@@ -24,3 +24,7 @@ def login(req):
 
 def d_home(req):
     return render(req,'home_page/home.html')
+def d_booking(req):
+    return render(req,"home_page/booking.html")
+            
+                  
