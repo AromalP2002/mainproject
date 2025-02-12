@@ -21,10 +21,13 @@ def login(req):
     #             return redirect()
     # else:
     #     return render(req,'login.html')
-
+def home(req):
+    return redirect(d_home)
 def d_home(req):
     return render(req,'home_page/home.html')
 def d_booking(req):
     return render(req,"home_page/booking.html")
+def d_appoinment(req):
+    return render(req,"home_page/appoinment.html" )
             
                   
