@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% load static %}
-    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -29,7 +29,7 @@
             <a class="nav-link" href="javascript:void(0)">BOOK APPOINTMENT</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">FIND DOCTORS</a>
+            <a class="nav-link" href="appoinment">Book Appointment</a>
           </li>
         </ul>
         <!-- <form class="d-flex">
@@ -43,66 +43,53 @@
           </div>
       </nav>
 
-      <nav class="navbar navbar-expand-sm navbar-white bg-white">
+      <nav class="navbar navbar-expand-sm navbar-dark bg-primary justify-content-center">
         <div class="container-fluid">
-          <!-- <a class="navbar-brand" href="javascript:void(0)">Logo</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-            <span class="navbar-toggler-icon"></span> -->
-          </button>
-          <div class="collapse navbar-collapse" id="mynavbar">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <!-- <a class="nav-link" href="javascript:void(0)">Gender</a> -->
-                <!-- <input class="form-control me-2" type="text" placeholder="Gender"> -->
-                <li class="nav-item dropdown">
-                  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                    Gender
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Male</a></li>
-                    <li><a class="dropdown-item" href="#">Female</a></li>
-                    
-                  </ul>
-                </li>
-              </li>
-              <li class="nav-item">
-                <!-- <a class="nav-link" href="javascript:void(0)">feedbacks</a> -->
-                <!-- <input class="form-control me-2" type="text" placeholder="Feedbacks"> -->
-                <li class="nav-item dropdown">
-                  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                    Experience
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">5+ years of Experience</a></li>
-                    <li><a class="dropdown-item" href="#">10+ years of Experience</a></li>
-                    <li><a class="dropdown-item" href="#">15+ years of Experience</a></li>
-                  </ul>
-                </li>
-              </li>
-              <li class="nav-item">
-                <!-- <a class="nav-link" href="javascript:void(0)">Experience</a> -->
-                <!-- <input class="form-control me-2" type="text" placeholder="Experience"> -->
-                <li class="nav-item dropdown">
-                  <!-- <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Others</a> -->
-                  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                    Others
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Fees</a></li>
-                    <li><a class="dropdown-item" href="#">Link 2</a></li>
-                    <li><a class="dropdown-item" href="#">Link 3</a></li>
-                  </ul>
-                </li>
-              </li>
-             
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="text" placeholder="Search Specialization">
-              <button class="btn btn-primary" type="button">Search</button>
-            </form>
-          </div>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto mx-auto">
+                    <li class="nav-item">
+                        <li class="nav-item dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Gender
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Male</a></li>
+                                <li><a class="dropdown-item" href="#">Female</a></li>
+                            </ul>
+                        </li>
+                    </li>
+                    <li class="nav-item">
+                        <li class="nav-item dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Experience
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">5+ years of Experience</a></li>
+                                <li><a class="dropdown-item" href="#">10+ years of Experience</a></li>
+                                <li><a class="dropdown-item" href="#">15+ years of Experience</a></li>
+                            </ul>
+                        </li>
+                    </li>
+                    <li class="nav-item">
+                        <li class="nav-item dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Others
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Fees</a></li>
+                                <li><a class="dropdown-item" href="#">Link 2</a></li>
+                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                            </ul>
+                        </li>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex mx-auto">
+                    <input class="form-control me-2" type="text" placeholder="Search Specialization">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form> -->
+            </div>
         </div>
-      </nav>
+    </nav>
 
     <!-- <div class="container mt-5">
         <h2>Book an Appointment</h2>
@@ -144,19 +131,67 @@
     </script> -->
 </section>  
 <section id="doctors">
-    <h2>Our Doctors</h2>
+    <!-- <h2>Our Doctors</h2>
     <div class="doctor">
         <img src="{% static 'images/doct1.jpeg' %}" alt="Dr. John Smith" class="doctor-img" width="50%" height="250px">
         <h3>Dr. John Smith</h3>
         <p>Specialty: Cardiologist</p>
         <button onclick="bookNow('Dr. John Smith')">Book Now</button>
+    </div> -->
+    <div class="card">
+      <h2>Doctor's Appointment</h2>
+
+      <!-- Doctor Info -->
+      <div class="doctor-info">
+              <img src="{% static 'images/doct1.jpeg' %}" alt="Doctor">
+          <p>Dr. John Doe</p>
+          <p>General Physician</p>
+      </div>
+
+      <!-- Appointment Info -->
+      <div class="appointment-info">
+          <!-- <p><span class="label">Patient Name:</span> Jane Smith</p> -->
+          <!-- <p><span class="label">Date:</span> <span class="date-time">Feb 20, 2025</span></p> -->
+          <!-- <p><span class="label">Time:</span> <span class="date-time">10:00 AM</span></p> -->
+          <p><span class="label">Location:</span> Clinic XYZ, City Center</p>
+      </div>
+
+      <!-- Button -->
+      <div class="button-container">
+          <button>bookNow</button>
+      </div>
+  </div>
+  <div class="card">
+    <h2>Doctor's Appointment</h2>
+
+    <!-- Doctor Info -->
+    <div class="doctor-info">
+            <img src="{% static 'images/doct3.jpg' %}" alt="Doctor">
+        <p>Dr.Jane Doe </p>
+        <p>Dermatologist</p>
+        
     </div>
-    <div class="doctor">
+
+    <!-- Appointment Info -->
+    <div class="appointment-info">
+        <!-- <p><span class="label">Patient Name:</span> Jane Smith</p> -->
+        <!-- <p><span class="label">Date:</span> <span class="date-time">Feb 20, 2025</span></p> -->
+        <!-- <p><span class="label">Time:</span> <span class="date-time">10:00 AM</span></p> -->
+        <p><span class="label">Location:</span> Clinic XYZ, City Center</p>
+    </div>
+
+    <!-- Button -->
+    <div class="button-container">
+        <button>bookNow</button>
+    </div>
+</div>
+
+    <!-- <div class="doctor">
         <img src="{% static 'images/doct3.jpg' %}" alt="Dr. Jane Doe" class="doctor-img" width="50%" height="250px">
         <h3>Dr. Jane Doe</h3>
         <p>Specialty: Dermatologist</p>
         <button onclick="bookNow('Dr. Jane Doe')">Book Now</button>
-    </div>
+    </div> -->
 </section> 
   
 <div class=" ">

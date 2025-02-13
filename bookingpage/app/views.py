@@ -29,5 +29,7 @@ def d_booking(req):
     return render(req,"home_page/booking.html")
 def d_appoinment(req):
     return render(req,"home_page/appoinment.html" )
+def d_card(req):
+    return render(req,"home_page/card.html")
             
                   
