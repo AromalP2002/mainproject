@@ -12,4 +12,4 @@ class booking(models.Model):
         return f"Dr. {self.user.get_full_name()} ({self.specialization})"
 
 
-      user = models.OneToOneField(User, on_delete=models.CASCADE)
+     

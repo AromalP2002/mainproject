@@ -63,35 +63,97 @@
     
             <label for="date">Select Appointment Date:</label>
             <input type="date" id="date" name="date" required>
-    
+<!--     
             <label for="time">Select Appointment Time:</label>
-            <input type="time" id="time" name="time" required>
+            <input type="time" id="time" name="time" required> -->
            <button type="submit" class="btn btn-success">Confirm Booking</button>
         </form>
         <p id="confirmation-message" class="mt-3 text-success"></p>
       </div>
 
-      <!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const doctorIndex = urlParams.get("doctor");
-            const doctors = ["Dr. Smith", "Dr. John", "Dr. Lisa"];
-
-            if (doctorIndex !== null) {
-                document.getElementById("doctor-name").value = doctors[doctorIndex];
-            }
-
-            document.getElementById("booking-form").addEventListener("submit", function (e) {
-                e.preventDefault();
-                const name = document.getElementById("name").value;
-                const date = document.getElementById("date").value;
-                const doctor = document.getElementById("doctor-name").value;
-
-                document.getElementById("confirmation-message").textContent = 
-                    `Appointment confirmed for ${name} with ${doctor} on ${date}`;
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Booking Slots</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .slot-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .slot {
+            padding: 10px 20px;
+            border: 1px solid #28a745;
+            background-color: #dff0d8;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .slot.booked {
+            background-color: #f8d7da;
+            border: 1px solid #dc3545;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h2>Book a Day Slot for Doctor Appointment</h2>
+    <div class="slot-container" id="slotContainer"></div>
+    <p id="selectedSlot"></p>
+    
+    <script>
+        const availableSlots = {
+            "Monday": ["10:00 AM", "2:00 PM"],
+            "Tuesday": ["9:00 AM", "1:00 PM", "3:00 PM"],
+            "Wednesday": [], // Fully booked
+            "Thursday": ["11:00 AM", "4:00 PM"],
+            "Friday": ["10:30 AM", "1:30 PM"]
+        };
+        
+        const slotContainer = document.getElementById("slotContainer");
+        const selectedSlot = document.getElementById("selectedSlot");
+        
+        Object.keys(availableSlots).forEach(day => {
+            const dayDiv = document.createElement("div");
+            dayDiv.innerHTML = `<strong>${day}</strong>`;
+            dayDiv.style.marginBottom = "10px";
+            
+            availableSlots[day].forEach(time => {
+                const slot = document.createElement("div");
+                slot.classList.add("slot");
+                slot.textContent = time;
+                
+                slot.addEventListener("click", () => {
+                    selectedSlot.textContent = `You selected: ${day} at ${time}`;
+                    setTimeout(() => {
+                        alert(`Your appointment is confirmed for ${day} at ${time}`);
+                    }, 200);
+                });
+                
+                dayDiv.appendChild(slot);
             });
+            
+            if (availableSlots[day].length === 0) {
+                const bookedMessage = document.createElement("div");
+                bookedMessage.classList.add("slot", "booked");
+                bookedMessage.textContent = "Fully Booked";
+                dayDiv.appendChild(bookedMessage);
+            }
+            
+            slotContainer.appendChild(dayDiv);
         });
-    </script> -->
+    </script>
+</body>
+</html>
+    
+      
      
      <footer class="footer" style="margin-top: 50px;">
       <div class="container-fluid" id="footcon">
